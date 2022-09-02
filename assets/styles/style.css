@@ -92,8 +92,18 @@ a {
 
 .logo {
   font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  font-weight: bold;
   margin-left: 15px;
-  border-bottom: solid 1px rgb(164, 50, 230);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  width: 18px;
+  margin-right: 5px;
 }
 
 .menu-buttons {
@@ -110,7 +120,7 @@ a {
   justify-content: space-around;
   align-items: center;
 
-  box-shadow: 0 0 2px rgb(230, 230, 230);
+  border-top: solid 1px rgb(230, 230, 230);
   animation: fade-in-show 500ms;
 }
 

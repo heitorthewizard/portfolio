@@ -28,9 +28,13 @@ fetch('https://api.github.com/users/heitorthewizard/repos?page=1')
       throw new Error(`HTTP error: ${response.status}`);
     }
 
-    return response.text();
+    return response.json();
   })
-  .then((text) => (reposElement.textContent = text))
+  .then((data) => {
+    data.forEach(obj => {
+      reposElement.innerHTML += obj.name + '<br>'
+    })
+  })
   .catch(
     (error) => (reposElement.textContent = `Could not fetch verse: ${error}`)
   );
