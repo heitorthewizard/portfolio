@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow: hidden;
+  font-family: sans-serif;
+  background-color: rgb(25, 22, 39);
+  color: rgb(230, 230, 230);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(230, 230, 230);
+}
+
+@keyframes fade-in-show {
+  0% {
+    bottom: -25vh;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes btn-line {
+  0% {
+    background-color: rgb(42, 42, 42);
+  }
+
+  100% {
+    background-color: red;
+  }
+}
+
+#app {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+}
+
+#top-button {
+  width: 30px;
+  height: 30px;
+  border: solid 1px rgb(230, 230, 230);
+  border-radius: 5px;
+  background-color: rgb(164, 50, 230);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  bottom: 10vh;
+  right: 0;
+
+  margin: 15px;
+  padding: 5px;
+  z-index: 10;
+}
+
+#top-button img {
+  width: 20px;
+}
+
+/* menu section */
+
+.menu {
+  width: 100%;
+  height: 8vh;
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+
+  background-color: rgb(25, 22, 39);
+  color: rgb(230, 230, 230);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 0 2px rgb(230, 230, 230);
+}
+
+.logo {
+  font-family: 'Times New Roman', Times, serif;
+  margin-left: 15px;
+  border-bottom: solid 1px rgb(164, 50, 230);
+}
+
+.menu-buttons {
+  width: 100%;
+  height: 25vh;
+
+  position: fixed;
+  bottom: 0;
+  background-color: rgb(25, 22, 39);
+  z-index: 10;
+
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-around;
+  align-items: center;
+
+  box-shadow: 0 0 2px rgb(230, 230, 230);
+  animation: fade-in-show 500ms;
+}
+
+.menu-buttons a {
+  display: grid;
+  place-items: center;
+}
+
+.menu-buttons img {
+  width: 20px;
+}
+
+.menu-buttons a {
+  padding: 10px;
+  display: grid;
+  place-items: center;
+  gap: 5px
+}
+
+.show-menus-button {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 15px;
+  padding: 5px;
+  z-index: 11;
+}
+
+.button-line {
+  width: 100%;
+  height: 2px;
+  background-color: rgb(230, 230, 230);
+  margin: 2px;
+  transition: ease 300ms;
+}
+
+.show-menus-button.active .button-line:nth-child(1) {
+  transform: rotate(45deg) translate(1px);
+  margin: 0;
+}
+
+.show-menus-button.active .button-line:nth-child(2) {
+  display: none;
+}
+
+.show-menus-button.active .button-line:nth-child(3) {
+  transform: rotate(-45deg) translate(1px);
+  margin: 0;
+}
+
+/* content section */
+/* home section */
+
+#home {
+  width: 100%;
+  padding: 5%;
+}
+
+#home h1 span {
+  color: rgb(164, 50, 230);
+}
+
+#home .contact-button {
+  width: 150px;
+  height: 50px;
+  margin: 20px;
+  background-color: rgb(164, 50, 230);
+  
+  display: grid;
+  place-items: center;
+  border-radius: 20px;
+
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#home .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0 50px 0;
+}
+
+#home .social-medias {
+  width: 40px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 25px;
+}
+
+#home .social-medias img{
+  width: 40px;
+}
+
+#home img {
+  width: 200px;
+  border-radius: 10px  70px 70px 70px;
+}
+
+/* about section */
+
+#about {
+  width: 100%;
+  padding: 5%;
+}
+
+#about h2 {
+  text-align: center;
+  color: rgb(164, 50, 230);
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+#about img {
+  width: 300px;
+  border-radius: 20px;
+  display: block;
+  margin: auto;
+}
+
+#about h3 {
+  text-align: center;
+  margin: 15px;
+}
+
+#about p {
+  margin-bottom: 15px;
+}
+
+/* professional skills section */
+#skills {
+  width: 100%;
+  padding: 5%;
+}
+
+#skills h2 {
+  text-align: center;
+  color: rgb(164, 50, 230);
+  margin-bottom: 30px;
+}
+
+.skill-data {
+  width: 250px;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.skill-data .data-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-data .data-container img {
+  width: 40px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 2px;
+  margin-top: 2px;
+  background-color: rgb(164, 50, 230);
+}
+
+/* default patterns that needs priority */
+.none {
+  display: none;
+}
