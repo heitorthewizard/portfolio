@@ -181,7 +181,7 @@ a {
 #home .contact-button {
   width: 150px;
   height: 50px;
-  margin: 20px;
+  margin: 20px auto 20px 0;
   background-color: rgb(164, 50, 230);
   
   display: grid;
@@ -192,12 +192,12 @@ a {
   font-weight: bold;
 }
 
-#home .container {
+#home .container-data {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 50px 0 50px 0;
+  margin: 30px 0 50px 0;
 }
 
 #home .social-medias {
@@ -205,7 +205,7 @@ a {
   height: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: baseline;
   gap: 25px;
 }
 
@@ -215,7 +215,7 @@ a {
 
 #home img {
   width: 200px;
-  border-radius: 10px  70px 70px 70px;
+  border-radius: 20px 50% 50% 50%;
 }
 
 /* about section */

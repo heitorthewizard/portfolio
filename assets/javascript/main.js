@@ -1,5 +1,3 @@
-const body = document.body
-
 // nav menu
 const navMenu = document.querySelector(".show-menus-button");
 const menuButtons = document.querySelector(".menu-buttons");
@@ -11,9 +9,28 @@ navMenu.addEventListener("click", () => {
 });
 
 // set skills percentages
-const skillsData = document.querySelectorAll('.skill-data')
-skillsData.forEach(el => {
-  const data = el.children[0].children[2].textContent
-  console.log(el.children[1])
-  el.children[1].style.width = data
-})
+const skillsData = document.querySelectorAll(".skill-data");
+
+skillsData.forEach((el) => {
+  const percentage = el.children[0].children[2].textContent;
+  const progressBar = el.children[1];
+  progressBar.style.width = percentage;
+});
+
+
+// retrieve github repos from github
+const reposElement = document.querySelector('.repos')
+const repos = []
+
+fetch('https://api.github.com/users/heitorthewizard/repos?page=1')
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+
+    return response.text();
+  })
+  .then((text) => (reposElement.textContent = text))
+  .catch(
+    (error) => (reposElement.textContent = `Could not fetch verse: ${error}`)
+  );
