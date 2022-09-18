@@ -1,3 +1,5 @@
+/* ###### MOBILE FIRST ###### */
+
 * {
   margin: 0;
   padding: 0;
@@ -27,16 +29,6 @@ a {
   }
 }
 
-@keyframes btn-line {
-  0% {
-    background-color: rgb(42, 42, 42);
-  }
-
-  100% {
-    background-color: red;
-  }
-}
-
 #app {
   width: 100%;
   height: 100vh;
@@ -45,7 +37,7 @@ a {
   position: relative;
 }
 
-#top-button {
+#top_button {
   width: 30px;
   height: 30px;
   border: solid 1px rgb(230, 230, 230);
@@ -66,7 +58,7 @@ a {
   z-index: 10;
 }
 
-#top-button img {
+#top_button img {
   width: 20px;
 }
 
@@ -103,10 +95,10 @@ a {
 
 .logo img {
   width: 18px;
-  margin-right: 5px;
+  margin-right: 8px;
 }
 
-.menu-buttons {
+.menu_buttons {
   width: 100%;
   height: 25vh;
 
@@ -124,23 +116,23 @@ a {
   animation: fade-in-show 500ms;
 }
 
-.menu-buttons a {
+.menu_buttons a {
   display: grid;
   place-items: center;
 }
 
-.menu-buttons img {
+.menu_buttons img {
   width: 20px;
 }
 
-.menu-buttons a {
+.menu_buttons a {
   padding: 10px;
   display: grid;
   place-items: center;
   gap: 5px;
 }
 
-.show-menus-button {
+.show_menus_button {
   width: 30px;
   height: 30px;
 
@@ -154,7 +146,7 @@ a {
   z-index: 11;
 }
 
-.button-line {
+.button_line {
   width: 100%;
   height: 2px;
   background-color: rgb(230, 230, 230);
@@ -162,16 +154,16 @@ a {
   transition: ease 300ms;
 }
 
-.show-menus-button.active .button-line:nth-child(1) {
+.show_menus_button.active .button_line:nth-child(1) {
   transform: rotate(45deg) translate(1px);
   margin: 0;
 }
 
-.show-menus-button.active .button-line:nth-child(2) {
+.show_menus_button.active .button_line:nth-child(2) {
   display: none;
 }
 
-.show-menus-button.active .button-line:nth-child(3) {
+.show_menus_button.active .button_line:nth-child(3) {
   transform: rotate(-45deg) translate(1px);
   margin: 0;
 }
@@ -181,18 +173,20 @@ a {
 
 #home {
   width: 100%;
-  padding: 5%;
+  padding: 10% 5%;
 }
 
 #home h1 span:nth-of-type(1) {
   color: rgb(164, 50, 230);
 }
 
-#home .contact-button {
+#home .contact_button {
   width: 150px;
   height: 50px;
   margin: 20px auto 20px 0;
   background-color: rgb(164, 50, 230);
+  color: rgb(230, 230, 230);
+  border: none;
 
   display: grid;
   place-items: center;
@@ -202,7 +196,7 @@ a {
   font-weight: bold;
 }
 
-#home .container-data {
+#home .container_data {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -210,7 +204,7 @@ a {
   margin: 30px 0 50px 0;
 }
 
-#home .social-medias {
+#home .social_medias {
   width: 40px;
   height: 200px;
   display: flex;
@@ -219,20 +213,20 @@ a {
   gap: 25px;
 }
 
-#home .social-medias img {
-  width: 40px;
-}
-
-#home img {
+#home #profile_photo {
   width: 200px;
   border-radius: 20px 50% 50% 50%;
+}
+
+#home .social_medias img {
+  width: 40px;
 }
 
 /* about section */
 
 #about {
   width: 100%;
-  padding: 5%;
+  padding: 10% 5%;
 }
 
 #about h2 {
@@ -243,7 +237,7 @@ a {
 }
 
 #about img {
-  width: 300px;
+  width: 280px;
   border-radius: 20px;
   display: block;
   margin: auto;
@@ -253,18 +247,18 @@ a {
   text-align: center;
   font-size: 1.2em;
   color: rgb(100, 255, 100);
-  margin: 15px;
+  margin-top: 15px;
 }
 
 #about p {
-  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 /* professional skills section */
 
 #skills {
   width: 100%;
-  padding: 5%;
+  padding: 10% 5%;
 }
 
 #skills h2 {
@@ -274,34 +268,46 @@ a {
   margin-bottom: 20px;
 }
 
-.skill-data {
-  width: 250px;
+.skill_data {
+  width: 100%;
   margin: auto;
   margin-bottom: 15px;
+  border-bottom: solid 1px rgb(114, 0, 180);
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-.skill-data .data-container {
+.skill_data .data_container {
+  padding: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.skill-data .data-container img {
+.skill_data .data_container img {
   width: 40px;
 }
 
-.progress-bar {
+.progress_bar {
   width: 100%;
   height: 2px;
   margin-top: 2px;
   background-color: rgb(100, 255, 100);
 }
 
+#skills ul {
+  width: 280px;
+  margin: auto;
+  list-style: none;
+  font-size: 14px;
+  color: rgb(164, 50, 230);
+}
+
 /* work section */
 
 #work {
   width: 100%;
-  padding: 5%;
+  padding: 10% 5%;
 }
 
 #work h2 {
@@ -315,31 +321,66 @@ a {
   text-align: center;
   color: rgb(100, 255, 100);
   font-size: 1.2em;
-  margin: 20px;
+  margin-top: 20px;
+  padding: 20px;
+  border: solid 1px rgb(114, 0, 180);
+  border-bottom: none;
+  border-radius: 20px 20px 0px 0px;
 }
 
 .repos {
   list-style: none;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
+  border: solid 1px rgb(114, 0, 180);
+  border-radius: 0px 0px 20px 20px;
+  padding: 10px 5px;
+  overflow: hidden;
+  text-align: center;
 }
 
-/* contact section */
+.repos li {
+  padding: 3px 0;
+}
 
-#contact h2 {
-  text-align: center;
-  color: rgb(164, 50, 230);
-  font-size: 30px;
-  margin-bottom: 20px;
+.repos a {
+  text-decoration: underline rgb(114, 0, 180);
+}
+
+#show_and_hide_button {
+  width: 150px;
+  height: 35px;
+  margin: auto;
+  background-color: rgb(164, 50, 230);
+  color: rgb(230, 230, 230);
+  border: none;
+
+  position: relative;
+  top: -1px;
+
+  display: grid;
+  place-items: center;
+  border-radius: 0px 0px 20px 20px;
+
+  font-size: 18px;
+  font-weight: bold;
 }
 
 /* footer section */
 
-footer {
+.rights_reserved {
   margin-top: 20px;
   margin-bottom: 8vh;
   text-align: center;
   color: rgb(100, 255, 100);
+}
+
+
+/* ###### DESKTOP AND TABLETS ###### */
+@media only screen and (min-width: 768px) {
+  .menu {
+    display: none;
+  }
 }
 
 /* default patterns that needs priority */
