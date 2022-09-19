@@ -116,7 +116,9 @@ async function main() {
   });
 
   // displaying all elements and toggling back to 6 when clicked
-  const showAndHideReposButton = document.querySelector("#show_and_hide_button");
+  const showAndHideReposButton = document.querySelector(
+    "#show_and_hide_button"
+  );
   showAndHideReposButton.addEventListener("click", showMoreRepos);
 
   function showMoreRepos() {
