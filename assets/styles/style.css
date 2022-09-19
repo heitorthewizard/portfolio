@@ -8,6 +8,8 @@
 
 html,
 body {
+  max-width: 1600px;
+  margin: auto;
   overflow: hidden;
   font-family: sans-serif;
   background-color: rgb(25, 22, 39);
@@ -82,7 +84,7 @@ button {
 /* menu section */
 
 .menu {
-  width: 100%;
+  max-width: 1600px;
   height: 8vh;
   position: fixed;
   z-index: 10;
@@ -316,11 +318,19 @@ button {
 }
 
 #skills ul {
-  width: 280px;
+  text-align: center;
   margin: auto;
   list-style: none;
   font-size: 14px;
   color: rgb(164, 50, 230);
+}
+
+#skills h3 {
+  text-align: center;
+  color: rgb(100, 255, 100);
+  font-size: 20px;
+  margin-top: 20px;
+  padding: 20px;
 }
 
 /* work section */
@@ -340,10 +350,10 @@ button {
 #work h3 {
   text-align: center;
   color: rgb(100, 255, 100);
-  font-size: 1.2em;
+  font-size: 20px;
   margin-top: 20px;
   padding: 20px;
-  border: solid 1px rgb(114, 0, 180);
+  border: solid 2px rgb(114, 0, 180);
   border-bottom: none;
   border-radius: 20px 20px 0px 0px;
 }
@@ -352,7 +362,7 @@ button {
   list-style: none;
   font-size: 20px;
   font-weight: bold;
-  border: solid 1px rgb(114, 0, 180);
+  border: solid 2px rgb(114, 0, 180);
   border-radius: 0px 0px 20px 20px;
   padding: 10px 5px;
   overflow: hidden;
@@ -402,8 +412,23 @@ button {
 
 /* ###### DESKTOP ###### */
 @media only screen and (min-width: 768px) {
+  #top_button {
+    width: 50px;
+    height: 50px;
+    right: calc(20% - 150px);
+  }
+
+  #top_button img {
+    width: 40px;
+  }
+
   .logo {
     margin-left: 5%;
+    font-size: 28px;
+  }
+
+  .logo img {
+    width: 28px;
   }
 
   .menu {
@@ -432,11 +457,16 @@ button {
   }
 
   .menu_buttons a {
+    font-size: 20px;
     font-weight: bold;
   }
 
   .menu_buttons a:hover {
     text-shadow: 0 0 5px rgb(230, 230, 230);
+  }
+
+  .menu_buttons img {
+    display: none;
   }
 
   .show_menus_button {
@@ -487,11 +517,12 @@ button {
   /* about section */
 
   #about {
-    padding: 10% 20% 10% 20%;
+    padding: 100px 20% 100px 20%;
   }
 
   #about h2 {
     font-size: 50px;
+    margin-bottom: 40px;
   }
 
   #about img {
@@ -508,6 +539,38 @@ button {
   }
 
   /* professional skills section */
-
   
+  #skills {
+    padding: 100px 20% 100px 20%;
+  }
+
+  #skills h2 {
+    font-size: 50px;
+    margin-bottom: 40px;
+  }
+
+  .skill_data {
+    max-width: 400px;
+  }
+
+  .skill_data span {
+    font-weight: bold;
+  }
+  
+  #skills ul {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 18px;
+  }
+
+  #skills h3 {
+    font-size: 30px;
+  }
+
+  /* work section */
+
+  #work {
+    padding: 100px 20% 100px 20%;
+  }
 }
