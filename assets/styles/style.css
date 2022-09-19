@@ -353,26 +353,32 @@ button {
   margin-top: 0;
 }
 
+.certifications_container .data_container {
+  width: 100%;
+  text-align: center;
+  display: grid;
+  place-items: center;
+}
+
 .certifications_container .certificate {
   margin-top: 30px;
-  padding: 10px 5px;
+  padding: 0;
+  border: solid 2px rgb(114, 0, 180);
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .certifications_container .data_container img {
   width: 300px;
-  border-radius: 20px 20px 0 0;
-  border: solid 2px rgb(114, 0, 180);
+  border-radius: 20px;
 }
 
 .certification_data {
-  max-width: 300px;
+  width: 300px;
   text-align: left;
   margin: auto;
   list-style: none;
   font-size: 18px;
-
-  border: solid 2px rgb(114, 0, 180);
-  border-radius: 0 0 20px 20px;
   padding: 0 5px;
 }
 
