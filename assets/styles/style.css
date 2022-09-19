@@ -459,10 +459,15 @@ button {
   .menu_buttons a {
     font-size: 20px;
     font-weight: bold;
+    transition: 300ms;
   }
 
   .menu_buttons a:hover {
     text-shadow: 0 0 5px rgb(230, 230, 230);
+  }
+
+  .menu_buttons a:active {
+    text-shadow: none;
   }
 
   .menu_buttons img {
@@ -488,8 +493,18 @@ button {
     height: 60px;
 
     margin: 40px auto 40px 0;
-
     font-size: 28px;
+    transition: 300ms;
+  }
+
+  #home .contact_button:hover {
+    background-color: rgb(114, 0, 180);
+    box-shadow: 0 0 5px rgb(230, 230, 230);
+  }
+
+  #home .contact_button:active {
+    background-color: rgb(114, 0, 180);
+    box-shadow: none;
   }
 
   #home .data_container {
@@ -506,6 +521,16 @@ button {
 
   #home .social_medias img {
     width: 80px;
+    border-radius: 50%;
+    transition: 300ms;
+  }
+
+  #home .social_medias img:hover {
+    box-shadow: 0 0 5px rgb(230, 230, 230);
+  }
+
+  #home .social_medias img:active {
+    box-shadow: none;
   }
 
   #home #profile_photo {
