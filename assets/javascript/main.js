@@ -127,7 +127,7 @@ async function main() {
         </a>
         <ul class="certification_data">
           <li><span>Course</span>: ${el.name}</li>
-          <li><span>Org</span>: ${el.organization}</li>
+          <li><span>By</span>: ${el.organization}</li>
           <li>
             <span>Authenticity</span>: Just
             <a href="${el.url}" target="_blank">
@@ -145,10 +145,10 @@ async function main() {
         </a>
         <ul class="certification_data">
           <li><span>Course</span>: ${el.name}</li>
-          <li><span>Org</span>: ${el.organization}</li>
+          <li><span>By</span>: ${el.organization}</li>
           <li><span>Code</span>: ${el.code}</li>
           <li>
-            <span>Authenticity</span>: copy the code above and
+            <span>Authenticity</span>: Copy the code above and
             <a href="${el.url}" target="_blank">
               click here
             </a>

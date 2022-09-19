@@ -13,8 +13,7 @@ body {
   overflow: hidden;
   font-family: sans-serif;
   font-weight: bold;
-  background-color: rgb(25, 22, 39);
-  color: rgb(230, 230, 230);
+  background-color: rgb(32, 32, 42);
 }
 
 ::-webkit-scrollbar {
@@ -62,6 +61,11 @@ button {
 #app {
   width: 100%;
   height: 100vh;
+  margin: auto;
+
+  background-color: rgb(25, 22, 39);
+  color: rgb(230, 230, 230);
+
   overflow-y: scroll;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -207,6 +211,8 @@ button {
 
 #home {
   width: 100%;
+  max-width: 500px;
+  margin: auto;
   padding: 10% 5%;
 }
 
@@ -238,7 +244,8 @@ button {
 }
 
 #home .social_medias {
-  width: 40px;
+  width: 100%;
+  max-width: 200px;
   height: 200px;
   display: flex;
   flex-direction: column;
@@ -247,11 +254,13 @@ button {
 }
 
 #home .social_medias img {
-  width: 40px;
+  width: 100%;
+  max-width: 60px;
 }
 
 #home #profile_photo {
-  width: 200px;
+  width: 100%;
+  max-width: 200px;
   border-radius: 20px 50% 50% 50%;
 }
 
@@ -270,7 +279,8 @@ button {
 }
 
 #about img {
-  width: 280px;
+  width: 100%;
+  max-width: 500px;
   border-radius: 20px;
   display: block;
   margin: auto;
@@ -299,6 +309,12 @@ button {
   color: rgb(164, 50, 230);
   font-size: 30px;
   margin-bottom: 20px;
+}
+
+.skills_container {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
 }
 
 .skill_data {
@@ -361,7 +377,7 @@ button {
 }
 
 .certifications_container .certificate {
-  margin-top: 30px;
+  margin-top: 60px;
   padding: 0;
   border: solid 2px rgb(114, 0, 180);
   border-radius: 20px;
@@ -369,17 +385,19 @@ button {
 }
 
 .certifications_container .data_container img {
-  width: 300px;
-  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
 }
 
 .certification_data {
-  width: 300px;
+  width: 100%;
+  max-width: 500px;
   text-align: left;
   margin: auto;
   list-style: none;
   font-size: 18px;
-  padding: 0 5px;
+  padding: 5px 10px;
+  background-color: rgb(32, 32, 42);
 }
 
 .certification_data li {
@@ -394,14 +412,6 @@ button {
   color: rgb(164, 50, 230);
   text-decoration: underline rgb(164, 50, 230);
   transition: 300ms;
-}
-
-.certification_data a:hover {
-  text-shadow: 0 0 5px rgb(230, 230, 230);
-}
-
-.certification_data a:active {
-  text-shadow: none;
 }
 
 /* work section */
@@ -420,6 +430,8 @@ button {
 
 #work .data_container {
   width: 100%;
+  max-width: 500px;
+  margin: auto;
   margin-top: 20px;
   padding: 10px 0;
   border: solid 2px rgb(114, 0, 180);
@@ -568,7 +580,7 @@ footer {
   /* home section */
 
   #home {
-    padding: 12px 20% 10% 20%;
+    max-width: 800px
   }
 
   #home h1 {
@@ -620,7 +632,7 @@ footer {
   }
 
   #home #profile_photo {
-    width: 300px;
+    max-width: 300px;
     position: absolute;
     right: 0;
     top: -100px;
@@ -659,8 +671,16 @@ footer {
     margin-bottom: 40px;
   }
 
-  .skill_data {
-    max-width: 400px;
+  .skills_container {
+    max-width: 500px;
+    margin: auto;
+    padding: 40px;
+    border: solid 2px rgb(114, 0, 180);
+    border-radius: 20px;
+  }
+
+  .skill_data .data_container {
+    font-size: 20px;
   }
 
   #skills #levels {
@@ -670,8 +690,26 @@ footer {
     font-size: 18px;
   }
 
-  #skills h3 {
+  .certifications_container h3 {
+    padding: 40px;
     font-size: 30px;
+  }
+
+  .certifications_container .data_container img {
+    width: 500px;
+  }
+
+  .certification_data {
+    width: 500px;
+    padding: 20px 30px;
+  }
+
+  .certification_data a:hover {
+    text-shadow: 0 0 5px rgb(164, 50, 230);
+  }
+
+  .certification_data a:active {
+    text-shadow: none;
   }
 
   /* work section */
