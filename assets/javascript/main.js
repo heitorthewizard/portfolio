@@ -91,6 +91,74 @@ async function main() {
     progressBar.style.width = percentage;
   });
 
+  // displaying certifications
+  const certifications = [
+    {
+      name: 'JavaScript Algorithms and Data Structures',
+      organization: 'FreeCodeCamp',
+      image: './assets/certifications/javascript.png',
+      url: 'https://freecodecamp.org/certification/heitorthewizard/javascript-algorithms-and-data-structures',
+      code: null
+    },
+    {
+      name: 'Conectar - Programming Fundamentals',
+      organization: 'Rocketseat',
+      image: './assets/certifications/programming-fundamentals.png',
+      url: 'https://app.rocketseat.com.br/discover/certificates',
+      code: 'c35b5da5-ef24-4011-b9bd-cad9f7b9bab8'
+    },
+    {
+      name: 'Web Development',
+      organization: 'ProgramadorBr',
+      image: './assets/certifications/html-css-js.png',
+      url: 'https://programadorbr.com/autenticidade',
+      code: 'DVWBHMB20HT21473'
+    }
+  ]
+
+  const certificationsData = document.querySelector('.certifications_container .data_container') 
+
+  certifications.forEach((el, idx) => {
+    if (el.code === null) {
+      certificationsData.innerHTML += `
+      <div class="certificate">
+        <a href="${el.url}" target="_blank">
+          <img src="${el.image}" />
+        </a>
+        <ul class="certification_data">
+          <li><span>Course</span>: ${el.name}</li>
+          <li><span>Org</span>: ${el.organization}</li>
+          <li>
+            <span>Authenticity</span>: Just
+            <a href="${el.url}" target="_blank">
+              click here
+            </a>
+          </li>
+        </ul>
+      </div>
+      `
+    } else {
+      certificationsData.innerHTML += `
+      <div class="certificate">
+        <a href="${el.url}" target="_blank">
+          <img src="${el.image}" />
+        </a>
+        <ul class="certification_data">
+          <li><span>Course</span>: ${el.name}</li>
+          <li><span>Org</span>: ${el.organization}</li>
+          <li><span>Code</span>: ${el.code}</li>
+          <li>
+            <span>Authenticity</span>: copy the code above and
+            <a href="${el.url}" target="_blank">
+              click here
+            </a>
+          </li>
+        </ul>
+      </div>
+      `
+    }
+  })
+
   // retrieve github repos from github API
   const reposElement = document.querySelector(".repos");
   const repos = [];

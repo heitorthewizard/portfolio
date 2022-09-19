@@ -12,6 +12,7 @@ body {
   margin: auto;
   overflow: hidden;
   font-family: sans-serif;
+  font-weight: bold;
   background-color: rgb(25, 22, 39);
   color: rgb(230, 230, 230);
 }
@@ -36,6 +37,7 @@ a {
 
 button {
   cursor: pointer;
+  font-weight: bold;
 }
 
 @keyframes fade_in_show {
@@ -98,15 +100,16 @@ button {
   height: 8vh;
   position: fixed;
   bottom: 0;
-  
+
   background-color: rgb(25, 22, 39);
   color: rgb(230, 230, 230);
-  
+  font-weight: lighter;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  
+
   border-top: solid 1px rgb(230, 230, 230);
   z-index: 10;
 }
@@ -224,7 +227,6 @@ button {
   border-radius: 20px;
 
   font-size: 22px;
-  font-weight: bold;
 }
 
 #home .data_container {
@@ -283,7 +285,6 @@ button {
 
 #about p {
   margin-top: 15px;
-  font-weight: bold;
 }
 
 /* professional skills section */
@@ -327,7 +328,7 @@ button {
   background-color: rgb(100, 255, 100);
 }
 
-#skills ul {
+#skills #levels {
   text-align: center;
   margin: auto;
   list-style: none;
@@ -335,12 +336,66 @@ button {
   color: rgb(164, 50, 230);
 }
 
-#skills h3 {
+.certifications_container {
+  width: 100%;
+  margin-top: 20px;
   text-align: center;
+}
+
+.certifications_container h3 {
+  padding: 20px;
   color: rgb(100, 255, 100);
   font-size: 20px;
-  margin-top: 20px;
-  padding: 20px;
+  margin-top: 0;
+}
+
+.certifications_container .certificate:nth-of-type(1) {
+  margin-top: 0;
+}
+
+.certifications_container .certificate {
+  margin-top: 30px;
+  padding: 10px 5px;
+}
+
+.certifications_container .data_container img {
+  width: 300px;
+  border-radius: 20px 20px 0 0;
+  border: solid 2px rgb(114, 0, 180);
+}
+
+.certification_data {
+  max-width: 300px;
+  text-align: left;
+  margin: auto;
+  list-style: none;
+  font-size: 18px;
+
+  border: solid 2px rgb(114, 0, 180);
+  border-radius: 0 0 20px 20px;
+  padding: 0 5px;
+}
+
+.certification_data li {
+  padding: 10px 0;
+}
+
+.certification_data span {
+  color: rgb(100, 255, 100);
+}
+
+.certification_data a {
+  color: rgb(164, 50, 230);
+  text-decoration: underline rgb(164, 50, 230);
+  transition: 300ms;
+}
+
+.certification_data a:hover {
+  text-shadow: 0 0 5px rgb(230, 230, 230);
+}
+
+.certification_data a:active {
+  text-shadow: none;
 }
 
 /* work section */
@@ -357,30 +412,32 @@ button {
   margin-bottom: 20px;
 }
 
+#work .data_container {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px 0;
+  border: solid 2px rgb(114, 0, 180);
+  border-radius: 20px;
+}
+
 #work h3 {
+  width: 100%;
   text-align: center;
   color: rgb(100, 255, 100);
   font-size: 20px;
-  margin-top: 20px;
-  padding: 20px;
-  border: solid 2px rgb(114, 0, 180);
-  border-bottom: none;
-  border-radius: 20px 20px 0px 0px;
+  padding: 5px 0 10px 0;
+  border-bottom: solid 2px rgb(114, 0, 180);
 }
 
 .repos {
   list-style: none;
   font-size: 20px;
-  font-weight: bold;
-  border: solid 2px rgb(114, 0, 180);
-  border-radius: 0px 0px 20px 20px;
-  padding: 10px 5px;
   overflow: hidden;
   text-align: center;
 }
 
 .repos li {
-  padding: 3px 0;
+  padding: 5px 0;
 }
 
 .repos a {
@@ -403,7 +460,6 @@ button {
   border-radius: 0px 0px 20px 20px;
 
   font-size: 18px;
-  font-weight: bold;
 }
 
 /* footer section */
@@ -523,7 +579,6 @@ button {
   }
 
   #home .contact_button:active {
-    background-color: rgb(114, 0, 180);
     box-shadow: none;
   }
 
@@ -580,7 +635,6 @@ button {
 
   #about p {
     font-size: 20px;
-    font-weight: bold;
   }
 
   /* professional skills section */
@@ -598,11 +652,7 @@ button {
     max-width: 400px;
   }
 
-  .skill_data span {
-    font-weight: bold;
-  }
-
-  #skills ul {
+  #skills #levels {
     width: 100%;
     text-align: center;
     margin-top: 50px;
@@ -617,5 +667,51 @@ button {
 
   #work {
     padding: 100px 20% 100px 20%;
+  }
+
+  #work h2 {
+    font-size: 50px;
+    margin-bottom: 40px;
+  }
+
+  #work .data_container {
+    max-width: 500px;
+    margin: 40px auto 0 auto;
+  }
+
+  #work h3 {
+    font-size: 30px;
+  }
+
+  .repos a {
+    transition: 300ms;
+  }
+
+  .repos a:hover {
+    text-shadow: 0 0 5px rgb(230, 230, 230);
+  }
+
+  .repos a:active {
+    text-shadow: none;
+  }
+
+  #show_and_hide_button {
+    transition: 300ms;
+  }
+
+  #show_and_hide_button:hover {
+    background-color: rgb(114, 0, 180);
+    box-shadow: 0 0px 3px rgb(230, 230, 230);
+  }
+
+  #show_and_hide_button:active {
+    box-shadow: none;
+  }
+
+  /* footer section */
+
+  .rights_reserved {
+    margin-bottom: 20px;
+    cursor: default;
   }
 }
