@@ -48,11 +48,21 @@ button {
   }
 }
 
+#page_progress_bar {
+  height: 2px;
+  background: rgb(100, 255, 100);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 15;
+}
+
 #app {
   width: 100%;
   height: 100vh;
   overflow-y: scroll;
   overflow-x: hidden;
+  scroll-behavior: smooth;
   position: relative;
 }
 
@@ -84,21 +94,21 @@ button {
 /* menu section */
 
 .menu {
-  max-width: 1600px;
+  width: 100%;
   height: 8vh;
   position: fixed;
-  z-index: 10;
-  bottom: -1px;
-
+  bottom: 0;
+  
   background-color: rgb(25, 22, 39);
   color: rgb(230, 230, 230);
-
+  
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
+  
   border-top: solid 1px rgb(230, 230, 230);
+  z-index: 10;
 }
 
 .logo {
@@ -416,10 +426,19 @@ button {
     width: 50px;
     height: 50px;
     right: calc(20% - 150px);
+    transition: 300ms;
   }
 
   #top_button img {
     width: 40px;
+  }
+
+  #top_button:hover {
+    box-shadow: 0 0 5px rgb(230, 230, 230);
+  }
+
+  #top_button:active {
+    box-shadow: none;
   }
 
   .logo {
@@ -432,9 +451,10 @@ button {
   }
 
   .menu {
-    position: sticky;
+    max-width: 1600px;
     height: 10vh;
-    top: 0px;
+    position: sticky;
+    top: 0;
     border-top: none;
     border-bottom: solid 1px rgb(230, 230, 230);
   }
@@ -564,7 +584,7 @@ button {
   }
 
   /* professional skills section */
-  
+
   #skills {
     padding: 100px 20% 100px 20%;
   }
@@ -581,7 +601,7 @@ button {
   .skill_data span {
     font-weight: bold;
   }
-  
+
   #skills ul {
     width: 100%;
     text-align: center;

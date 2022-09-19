@@ -1,4 +1,6 @@
 async function main() {
+  const app = document.querySelector("#app");
+
   // nav menu
   const navMenu = document.querySelector(".show_menus_button");
   const menuButtons = document.querySelector(".menu_buttons");
@@ -7,6 +9,18 @@ async function main() {
   navMenu.addEventListener("click", () => {
     navMenu.classList.toggle("active");
     menuButtons.classList.toggle("none");
+  });
+
+  // page scroll progress bar
+  const pageProgressBar = document.querySelector("#page_progress_bar");
+
+  app.addEventListener("scroll", () => {
+    const scrolledPercentage =
+      (app.scrollTop /
+        (app.scrollHeight - app.clientHeight)) *
+      100;
+    
+    pageProgressBar.style.width = `${scrolledPercentage}%`;
   });
 
   // data to be render on the web page
