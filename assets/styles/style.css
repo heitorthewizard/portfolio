@@ -455,8 +455,6 @@ button {
 
 #work p {
   width: 100%;
-  max-width: 500px;
-  margin: auto;
   text-align: center;
 }
 
@@ -748,10 +746,18 @@ footer {
 
   #work h3 {
     font-size: 30px;
+    transition: 300ms;
+  }
+
+  #work h3:hover {
+    text-shadow: 0 0 3px rgb(100, 200, 100);
+  }
+
+  #work h3:active {
+    text-shadow: none;
   }
 
   .repos a {
-    transition: 300ms;
   }
 
   .repos a:hover {
