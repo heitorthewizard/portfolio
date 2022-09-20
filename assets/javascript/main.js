@@ -96,6 +96,7 @@ async function main() {
     {
       name: 'JavaScript Algorithms and Data Structures',
       organization: 'FreeCodeCamp',
+      hours: '300h (approximately)',
       image: './assets/certifications/javascript.png',
       url: 'https://freecodecamp.org/certification/heitorthewizard/javascript-algorithms-and-data-structures',
       code: null
@@ -103,6 +104,7 @@ async function main() {
     {
       name: 'Conectar - Programming Fundamentals',
       organization: 'Rocketseat',
+      hours: '2h23',
       image: './assets/certifications/programming-fundamentals.png',
       url: 'https://app.rocketseat.com.br/discover/certificates',
       code: 'c35b5da5-ef24-4011-b9bd-cad9f7b9bab8'
@@ -110,6 +112,7 @@ async function main() {
     {
       name: 'Web Development',
       organization: 'ProgramadorBr',
+      hours: '26h',
       image: './assets/certifications/html-css-js.png',
       url: 'https://programadorbr.com/autenticidade',
       code: 'DVWBHMB20HT21473'
@@ -128,6 +131,7 @@ async function main() {
         <ul class="certification_data">
           <li><span>Course</span>: ${el.name}</li>
           <li><span>By</span>: ${el.organization}</li>
+          <li><span>Hours</span>: ${el.hours}</li>
           <li>
             <span>Authenticity</span>: Just
             <a href="${el.url}" target="_blank">
@@ -146,6 +150,7 @@ async function main() {
         <ul class="certification_data">
           <li><span>Course</span>: ${el.name}</li>
           <li><span>By</span>: ${el.organization}</li>
+          <li><span>Hours</span>: ${el.hours}</li>
           <li><span>Code</span>: ${el.code}</li>
           <li>
             <span>Authenticity</span>: Copy the code above and
