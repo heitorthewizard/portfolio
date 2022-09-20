@@ -50,8 +50,8 @@ button {
 }
 
 #page_progress_bar {
-  height: 2px;
-  background: rgb(164, 50, 230);
+  height: 3px;
+  background: rgb(100, 200, 100);
   position: fixed;
   top: 0;
   left: 0;
@@ -294,7 +294,7 @@ button {
 }
 
 #about p em {
-  color:rgb(100, 200, 100);
+  color:rgb(164, 50, 230);
 }
 
 /* professional skills section */
@@ -512,6 +512,10 @@ footer {
 
 /* ###### DESKTOP ###### */
 @media only screen and (min-width: 768px) {
+  #page_progress_bar {
+    background-color: rgb(164, 50, 230);
+  }
+
   #top_button {
     width: 60px;
     height: 60px;
