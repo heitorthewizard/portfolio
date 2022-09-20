@@ -51,7 +51,7 @@ button {
 
 #page_progress_bar {
   height: 2px;
-  background: rgb(100, 255, 100);
+  background: rgb(164, 50, 230);
   position: fixed;
   top: 0;
   left: 0;
@@ -73,10 +73,10 @@ button {
 }
 
 #top_button {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   border: solid 1px rgb(230, 230, 230);
-  border-radius: 5px;
+  border-radius: 50%;
   background-color: rgb(164, 50, 230);
 
   display: flex;
@@ -94,7 +94,7 @@ button {
 }
 
 #top_button img {
-  width: 20px;
+  width: 30px;
 }
 
 /* menu section */
@@ -273,28 +273,24 @@ button {
 
 #about h2 {
   text-align: center;
-  color: rgb(164, 50, 230);
   font-size: 30px;
+  color: rgb(100, 200, 100);
   margin-bottom: 20px;
-}
-
-#about img {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 20px;
-  display: block;
-  margin: auto;
 }
 
 #about h3 {
   text-align: center;
   font-size: 20px;
-  color: rgb(100, 255, 100);
+  color: rgb(164, 50, 230);
   margin-top: 15px;
 }
 
 #about p {
   margin-top: 15px;
+}
+
+#about p em {
+  color:rgb(100, 200, 100);
 }
 
 /* professional skills section */
@@ -306,7 +302,7 @@ button {
 
 #skills h2 {
   text-align: center;
-  color: rgb(164, 50, 230);
+  color: rgb(100, 200, 100);
   font-size: 30px;
   margin-bottom: 20px;
 }
@@ -341,15 +337,13 @@ button {
   width: 100%;
   height: 2px;
   margin-top: 2px;
-  background-color: rgb(100, 255, 100);
+  background-color: rgb(100, 200, 100);
 }
 
 #skills #levels {
-  text-align: center;
   margin: auto;
   list-style: none;
   font-size: 14px;
-  color: rgb(164, 50, 230);
 }
 
 .certifications_container {
@@ -360,7 +354,7 @@ button {
 
 .certifications_container h3 {
   padding: 20px;
-  color: rgb(100, 255, 100);
+  color: rgb(100, 200, 100);
   font-size: 20px;
   margin-top: 0;
 }
@@ -405,7 +399,7 @@ button {
 }
 
 .certification_data span {
-  color: rgb(100, 255, 100);
+  color: rgb(100, 200, 100);
 }
 
 .certification_data a {
@@ -423,9 +417,17 @@ button {
 
 #work h2 {
   text-align: center;
-  color: rgb(164, 50, 230);
+  color: rgb(100, 200, 100);
   font-size: 30px;
   margin-bottom: 20px;
+}
+
+#work img{
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto 30px auto;
 }
 
 #work .data_container {
@@ -441,10 +443,17 @@ button {
 #work h3 {
   width: 100%;
   text-align: center;
-  color: rgb(100, 255, 100);
+  color: rgb(100, 200, 100);
   font-size: 20px;
   padding: 5px 0 10px 0;
   border-bottom: solid 2px rgb(114, 0, 180);
+}
+
+#work p {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
 }
 
 .repos {
@@ -491,7 +500,7 @@ footer {
   margin-top: 20px;
   margin-bottom: 50vh;
   text-align: center;
-  color: rgb(100, 255, 100);
+  color: rgb(100, 200, 100);
 }
 
 /* default patterns that needs priority */
@@ -502,14 +511,14 @@ footer {
 /* ###### DESKTOP ###### */
 @media only screen and (min-width: 768px) {
   #top_button {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     right: calc(20% - 150px);
     transition: 300ms;
   }
 
   #top_button img {
-    width: 40px;
+    width: 30px;
   }
 
   #top_button:hover {
@@ -561,6 +570,14 @@ footer {
     transition: 300ms;
   }
 
+  .menu_buttons a:nth-of-type(5) {
+    color: rgb(164, 50, 230);
+  }
+
+  .menu_buttons a:nth-of-type(5):hover {
+    text-shadow: 0 0 5px rgb(164, 50, 230);
+  }
+
   .menu_buttons a:hover {
     text-shadow: 0 0 5px rgb(230, 230, 230);
   }
@@ -580,7 +597,8 @@ footer {
   /* home section */
 
   #home {
-    max-width: 800px
+    max-width: 800px;
+    padding: 5% 5% 10% 5%;
   }
 
   #home h1 {
@@ -618,7 +636,6 @@ footer {
   }
 
   #home .social_medias img {
-    width: 80px;
     border-radius: 50%;
     transition: 300ms;
   }
@@ -640,16 +657,12 @@ footer {
   /* about section */
 
   #about {
-    padding: 100px 20% 100px 20%;
+    padding: 150px 20% 100px 20%;
   }
 
   #about h2 {
     font-size: 50px;
     margin-bottom: 40px;
-  }
-
-  #about img {
-    width: 500px;
   }
 
   #about h3 {
@@ -658,6 +671,7 @@ footer {
 
   #about p {
     font-size: 20px;
+    text-align: justify;
   }
 
   /* professional skills section */
@@ -685,7 +699,7 @@ footer {
 
   #skills #levels {
     width: 100%;
-    text-align: center;
+    max-width: 500px;
     margin-top: 50px;
     font-size: 18px;
   }
