@@ -428,7 +428,7 @@ button {
 
 #work img{
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   border-radius: 20px;
   display: block;
   margin: 0 auto 30px auto;
@@ -456,13 +456,14 @@ button {
 #work p {
   width: 100%;
   text-align: center;
+  font-size: 20px;
 }
 
 .repos {
   list-style: none;
   font-size: 20px;
   overflow: hidden;
-  text-align: center;
+  padding-left: 5%;
 }
 
 .repos li {
