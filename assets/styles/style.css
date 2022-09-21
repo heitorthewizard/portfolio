@@ -309,7 +309,7 @@ button {
 #about h3 {
   text-align: center;
   font-size: 20px;
-  color: rgb(164, 50, 230);
+  color: rgb(200, 150, 230);
   margin-top: 15px;
 }
 
@@ -435,7 +435,7 @@ button {
 }
 
 .certification_data a {
-  color: rgb(164, 50, 230);
+  color: rgb(200, 150, 230);
   text-decoration: underline rgb(164, 50, 230);
   transition: 300ms;
 }
