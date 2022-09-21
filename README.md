@@ -1,2 +1,2 @@
 # Personal Website
- - Feel free to copy and adapt for your own ;)
+ - Feel free to copy and adapt as your own ;)
