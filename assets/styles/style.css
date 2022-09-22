@@ -51,7 +51,7 @@ button {
 
 #page_progress_bar {
   height: 3px;
-  background: rgb(100, 200, 100);
+  background: rgb(100, 255, 150);
   position: fixed;
   top: 0;
   left: 0;
@@ -302,7 +302,7 @@ button {
 #about h2 {
   text-align: center;
   font-size: 30px;
-  color: rgb(100, 200, 100);
+  color: rgb(230, 230, 230);
   margin-bottom: 20px;
 }
 
@@ -334,7 +334,7 @@ button {
 
 #skills h2 {
   text-align: center;
-  color: rgb(100, 200, 100);
+  color: rgb(230, 230, 230);
   font-size: 30px;
   margin-bottom: 20px;
 }
@@ -369,13 +369,7 @@ button {
   width: 100%;
   height: 2px;
   margin-top: 2px;
-  background-color: rgb(100, 200, 100);
-}
-
-#skills #levels {
-  margin: auto;
-  list-style: none;
-  font-size: 14px;
+  background-color: rgb(100, 255, 150);
 }
 
 .certifications_container {
@@ -386,7 +380,7 @@ button {
 
 .certifications_container h3 {
   padding: 20px;
-  color: rgb(100, 200, 100);
+  color: rgb(100, 255, 150);
   font-size: 20px;
   margin-top: 0;
 }
@@ -431,7 +425,7 @@ button {
 }
 
 .certification_data span {
-  color: rgb(100, 200, 100);
+  color: rgb(100, 255, 150);
 }
 
 .certification_data a {
@@ -449,7 +443,7 @@ button {
 
 #work h2 {
   text-align: center;
-  color: rgb(100, 200, 100);
+  color: rgb(230, 230, 230);
   font-size: 30px;
   margin-bottom: 20px;
 }
@@ -475,7 +469,7 @@ button {
 #work h3 {
   width: 100%;
   text-align: center;
-  color: rgb(100, 200, 100);
+  color: rgb(100, 255, 150);
   font-size: 20px;
   padding: 5px 0 10px 0;
   border-bottom: solid 2px rgb(114, 0, 180);
@@ -531,7 +525,6 @@ footer {
   margin-top: 20px;
   margin-bottom: 50vh;
   text-align: center;
-  color: rgb(100, 200, 100);
 }
 
 /* default patterns that needs priority */
@@ -807,7 +800,7 @@ footer {
   }
 
   #work h3:hover {
-    text-shadow: 0 0 3px rgb(100, 200, 100);
+    text-shadow: 0 0 3px rgb(200, 150, 230);
   }
 
   #work h3:active {
