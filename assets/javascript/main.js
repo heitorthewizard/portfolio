@@ -475,7 +475,7 @@ async function main() {
               melhor. Ao melhorar a mim mesmo, estou melhorando o mundo.
             </p>
 
-            <h3>Porque Heitor The Wizard?</h3>
+            <h3>Por que Heitor The Wizard?</h3>
 
             <p>
               Acredito que os computadores são algo mágico, um artefato que
