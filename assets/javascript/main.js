@@ -98,7 +98,7 @@ async function main() {
     {
       name: "JavaScript Algorithms and Data Structures",
       organization: "FreeCodeCamp",
-      hours: "300h (approximately)",
+      hours: "300h",
       image: "./assets/certifications/javascript.png",
       url: "https://freecodecamp.org/certification/heitorthewizard/javascript-algorithms-and-data-structures",
       code: null,
@@ -496,22 +496,6 @@ async function main() {
               aplicativos, jogos, etc. Incríveis <em>obras de arte</em>. Essas pessoas
               para mim são como os <em>magos</em> fazendo mágicas e feitiços. 
               E eu sou uma delas!
-            </p>
-
-            <h3>Minha Missão</h3>
-
-            <p>
-              Eu procuro adquirir <em>experiência</em> aplicando
-              desenvolvimento de software em tudo que eu estiver trabalhando,
-              <em>trazendo inovação, automação, solução de problemas e valor</em>.
-              Eu quero entender como uma grande companhia funciona, como é
-              <em>trabalhar em equipe com pessoas capacitadas</em> das quais posso
-              <em>aprender</em> e <em>evoluir</em>,
-              <em>melhorando minhas habilidades</em> em lidar com pessoas,
-              <em>negociações</em>, <em>solução de problemas</em> e <em>desenvolvimento de 
-              software</em>. Quero <em>deixar um legado de grande valor</em> onde quer que eu
-              vá. Só assim poderei começar meu próprio negócio que até agora não
-              faço ideia do que será... :(
             </p>
           </div>
         </section>
