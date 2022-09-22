@@ -521,11 +521,6 @@ async function main() {
             <h2>Habilidades</h2>
 
             <div class="skills_container"></div>
-            <ul id="levels">
-              <li>20% - Básico</li>
-              <li>50% - Intermediário</li>
-              <li>80% - Avançado</li>
-            </ul>
 
             <div class="certifications_container">
               <h3>Certificados</h3>
