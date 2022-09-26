@@ -3,6 +3,7 @@
 const app = document.querySelector("#app");
 const englishPage = app.innerHTML;
 let language = "en";
+let isFullScreen = false;
 
 async function main() {
   // nav menu
@@ -13,6 +14,78 @@ async function main() {
   navMenu.addEventListener("click", () => {
     navMenu.classList.toggle("active");
     menuButtons.classList.toggle("none");
+  });
+
+  // full screen mode
+  const toggleFullScreenButtonImage = document.querySelector(
+    "#toggleFullScreen > img"
+  );
+
+  // check if page is Fullscreen
+  function checkIfFullscreen() {
+    // English Page
+    if (isFullScreen === true && language == "en") {
+      isFullScreen = false;
+
+      toggleFullScreenButtonImage.setAttribute(
+        "src",
+        "./assets/images/exit-fullscreen.svg"
+      );
+    } else if (isFullScreen === false && language == "en") {
+      isFullScreen = true;
+
+      toggleFullScreenButtonImage.setAttribute(
+        "src",
+        "./assets/images/fullscreen.svg"
+      );
+    }
+
+    // Portuguese Page has to be the reversed
+    if (isFullScreen === true && language == "pt") {
+      isFullScreen = false;
+
+      toggleFullScreenButtonImage.setAttribute(
+        "src",
+        "./assets/images/fullscreen.svg"
+      );
+    } else if (isFullScreen === false && language == "pt") {
+      isFullScreen = true;
+
+      toggleFullScreenButtonImage.setAttribute(
+        "src",
+        "./assets/images/exit-fullscreen.svg"
+      );
+    }
+  }
+
+  checkIfFullscreen();
+
+  const toggleFullScreenButton = document.querySelector("#toggleFullScreen");
+
+  toggleFullScreenButton.addEventListener("click", () => {
+    let requestFullScreen =
+      document.documentElement.requestFullscreen ||
+      document.documentElement.mozRequestFullScreen ||
+      document.documentElement.webkitRequestFullScreen ||
+      document.documentElement.msRequestFullscreen;
+    let cancelFullScreen =
+      document.exitFullscreen ||
+      document.mozCancelFullScreen ||
+      document.webkitExitFullscreen ||
+      document.msExitFullscreen;
+
+    if (
+      !document.fullscreenElement &&
+      !document.mozFullScreenElement &&
+      !document.webkitFullscreenElement &&
+      !document.msFullscreenElement
+    ) {
+      requestFullScreen.call(document.documentElement);
+    } else {
+      cancelFullScreen.call(document);
+    }
+
+    checkIfFullscreen();
   });
 
   // page scroll progress bar
@@ -127,8 +200,7 @@ async function main() {
 
   certifications.forEach((el) => {
     if (el.code === null) {
-
-      if (language == 'en') {
+      if (language == "en") {
         certificationsData.innerHTML += `
         <div class="certificate">
           <a href="${el.url}" target="_blank">
@@ -168,8 +240,7 @@ async function main() {
         `;
       }
     } else {
-
-      if (language == 'en') {
+      if (language == "en") {
         certificationsData.innerHTML += `
         <div class="certificate">
           <a href="${el.url}" target="_blank">
@@ -236,7 +307,7 @@ async function main() {
 
   // cleaning up repos elements so when main() is called again won't there be
   // repeated elements
-  reposElement.innerHTML = ''
+  reposElement.innerHTML = "";
 
   // displaying 6 elements
   repos.forEach((obj, idx) => {
@@ -265,10 +336,10 @@ async function main() {
     this.removeEventListener("click", showMoreRepos);
     this.addEventListener("click", showLessRepos);
 
-    if (language == 'en') {
+    if (language == "en") {
       this.textContent = "Show Less";
     } else {
-      this.textContent = "Menos"
+      this.textContent = "Menos";
     }
 
     const allRepos = document.querySelectorAll(".repos > li");
@@ -283,11 +354,11 @@ async function main() {
   function showLessRepos() {
     this.removeEventListener("click", showLessRepos);
     this.addEventListener("click", showMoreRepos);
-    
-    if (language == 'en') {
+
+    if (language == "en") {
       this.textContent = "Show More";
     } else {
-      this.textContent = "Mais"
+      this.textContent = "Mais";
     }
 
     const allRepos = document.querySelectorAll(".repos > li");
@@ -328,6 +399,10 @@ async function main() {
       <button id="lang_button">EN</button>
 
       <nav class="menu">
+        <button id="toggleFullScreen">
+          <img alt="full screen icon">
+        </button>
+
         <div class="logo">
           <img src="./assets/images/favicon.png" alt="logo" />
           HeitorTheWizard
@@ -442,7 +517,7 @@ async function main() {
               máquina da qual você pode criar o que imaginar sendo o único limite 
               o hardware, a possibilidade de <em>criar</em> novos mundos,
               <em>resolver problemas</em> com <em>automação</em> e 
-              <em>inovar</em> me deixaram muito animado! Decidi naquele
+              <em>inolet</em> me deixaram muito animado! Decidi naquele
               momento que daria uma chance e aprender
               <em>desenvolvimento de software</em> apenas por diversão. Acabei
               me <em>apaixonando</em> e perdendo a noção do tempo enquanto
@@ -486,7 +561,7 @@ async function main() {
               ainda, lembrar a voz e a imagem daqueles que já amamos e que se
               foram. <em>Facilitam nossas vidas</em> no dia a dia, auxiliam pessoas 
               debilitadas. Eles nos ajudam
-              a curar doenças, a <em>resolver problemas</em> que levariam
+              a curar doenças, a <em>resolver problemas</em> que leletiam
               anos e anos para serem resolvidos sem eles. É a <em>criação mais importante
               da humanidade</em>.
               É surreal como pegamos elementos da natureza e os

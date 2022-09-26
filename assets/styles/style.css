@@ -141,11 +141,18 @@ button {
   z-index: 10;
 }
 
+#toggleFullScreen {
+  width: 20px;
+  height: 20px;
+  border: none;
+  margin-left: 15px;
+  background-color: transparent;
+}
+
 .logo {
   font-family: "Times New Roman", Times, serif;
   font-size: 18px;
   font-weight: bold;
-  margin-left: 15px;
 
   display: flex;
   justify-content: center;
@@ -538,6 +545,10 @@ footer {
     background-color: rgb(164, 50, 230);
   }
 
+  #toggleFullScreen {
+    display: none;
+  }
+
   #top_button {
     width: 60px;
     height: 60px;
@@ -574,8 +585,8 @@ footer {
   }
 
   .logo {
-    margin-left: 5%;
     font-size: 28px;
+    margin-left: 5%;
   }
 
   .logo img {
@@ -614,11 +625,11 @@ footer {
     transition: 300ms;
   }
 
-  .menu_buttons a:nth-of-type(5) {
+  .menu_buttons a:last-child {
     color: rgb(164, 50, 230);
   }
 
-  .menu_buttons a:nth-of-type(5):hover {
+  .menu_buttons a:last-child:hover {
     text-shadow: 0 0 5px rgb(164, 50, 230);
   }
 
@@ -807,7 +818,7 @@ footer {
     text-shadow: none;
   }
 
-  .repos a:hover{
+  .repos a:hover {
     transition: 300ms;
   }
 
