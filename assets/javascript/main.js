@@ -103,42 +103,42 @@ async function main() {
     {
       name: "HTML",
       percentage: "70%",
-      imgPath: "./assets/images/html5.svg",
+      image: "html5.svg",
     },
     {
       name: "CSS",
       percentage: "60%",
-      imgPath: "./assets/images/css3.svg",
+      image: "css3.svg",
     },
     {
       name: "JavaScript",
       percentage: "85%",
-      imgPath: "./assets/images/javascript.svg",
+      image: "javascript.svg",
     },
     {
       name: "Node JS",
       percentage: "70%",
-      imgPath: "./assets/images/nodejs.svg",
+      image: "nodejs.svg",
     },
     {
       name: "React JS",
       percentage: "20%",
-      imgPath: "./assets/images/react.svg",
+      image: "react.svg",
     },
     {
       name: "Python",
       percentage: "75%",
-      imgPath: "./assets/images/python.svg",
+      image: "python.svg",
     },
     {
       name: "MySQL",
       percentage: "20%",
-      imgPath: "./assets/images/mysql.svg",
+      image: "mysql.svg",
     },
     {
       name: "MongoDB",
       percentage: "20%",
-      imgPath: "./assets/images/mongodb.svg",
+      image: "mongodb.svg",
     },
   ];
 
@@ -148,7 +148,7 @@ async function main() {
     skillElements.innerHTML += `
       <div class="skill_data">
         <div class="data_container">
-            <img src="${el.imgPath}" alt="${el.name} logo">
+            <img src="./assets/images/${el.image}" alt="${el.name} logo">
               <span>${el.name}</span>
               <span class="percentage">${el.percentage}</span>
         </div>
@@ -172,7 +172,7 @@ async function main() {
       name: "JavaScript Algorithms and Data Structures",
       organization: "FreeCodeCamp",
       hours: "300h",
-      image: "./assets/certifications/javascript.png",
+      image: "javascript.png",
       url: "https://freecodecamp.org/certification/heitorthewizard/javascript-algorithms-and-data-structures",
       code: null,
     },
@@ -180,7 +180,7 @@ async function main() {
       name: "Conectar - Basic Concepts of Programming",
       organization: "Rocketseat",
       hours: "2h23",
-      image: "./assets/certifications/programming-fundamentals.png",
+      image: "programming-fundamentals.png",
       url: "https://app.rocketseat.com.br/discover/certificates",
       code: "c35b5da5-ef24-4011-b9bd-cad9f7b9bab8",
     },
@@ -188,7 +188,7 @@ async function main() {
       name: "Web Development - HTML, CSS and JavaScript",
       organization: "ProgramadorBr",
       hours: "26h",
-      image: "./assets/certifications/html-css-js.png",
+      image: "html-css-js.png",
       url: "https://programadorbr.com/autenticidade",
       code: "DVWBHMB20HT21473",
     },
@@ -204,7 +204,7 @@ async function main() {
         certificationsData.innerHTML += `
         <div class="certificate">
           <a href="${el.url}" target="_blank">
-            <img src="${el.image}" />
+            <img src="./assets/certifications/${el.image}" />
           </a>
           <ul class="certification_data">
             <li><span>Course</span>: ${el.name}</li>
@@ -223,7 +223,7 @@ async function main() {
         certificationsData.innerHTML += `
         <div class="certificate">
           <a href="${el.url}" target="_blank">
-            <img src="${el.image}" />
+            <img src="./assets/certifications/${el.image}" />
           </a>
           <ul class="certification_data">
             <li><span>Curso</span>: ${el.name}</li>
@@ -244,7 +244,7 @@ async function main() {
         certificationsData.innerHTML += `
         <div class="certificate">
           <a href="${el.url}" target="_blank">
-            <img src="${el.image}" />
+            <img src="./assets/certifications/${el.image}" />
           </a>
           <ul class="certification_data">
             <li><span>Course</span>: ${el.name}</li>
@@ -264,7 +264,7 @@ async function main() {
         certificationsData.innerHTML += `
         <div class="certificate">
           <a href="${el.url}" target="_blank">
-            <img src="${el.image}" />
+            <img src="./assets/certifications/${el.image}" />
           </a>
           <ul class="certification_data">
             <li><span>Curso</span>: ${el.name}</li>
@@ -283,6 +283,102 @@ async function main() {
       }
     }
   });
+
+  // works slide show
+  const slideShowContainer = document.querySelector(".slideshow_container");
+  const slideShowDotsContainer = document.querySelector(".dots_container");
+
+  const slidesData = [
+    {
+      image: "xprime.png",
+      caption: "Xprime-Life E-commerce (HTML, CSS, JS)",
+    },
+    {
+      image: "broadfarma.png",
+      caption: "Broadfarma Website (HTML, CSS, JS)",
+    },
+    {
+      image: "agroibi.png",
+      caption: "Agroibi Marketplace (ReactJS, Sanity)",
+    },
+  ];
+
+  // display slides and dots
+  slidesData.forEach((el, idx) => {
+    const totalNumberOfItems = slidesData.length;
+    const itemNumber = idx + 1;
+
+    slideShowContainer.innerHTML += `
+    <div class="my_slides">
+      <div class="number_text">${itemNumber} / ${totalNumberOfItems}</div>
+      <img src="./assets/projects/${el.image}" style="width: 100%" />
+      <div class="text">${el.caption}</div>
+    </div>
+    `;
+  });
+
+  const dots = slidesData.length;
+
+  for (let i = 0; i < dots; i++) {
+    slideShowDotsContainer.innerHTML += `
+    <span class="dot"></span>
+    `;
+  }
+
+  const prevSlideButtons = document.querySelector(".prev");
+  prevSlideButtons.addEventListener("click", () => {
+    plusSlides(-1);
+  });
+
+  const nextSlideButton = document.querySelector(".next");
+  nextSlideButton.addEventListener("click", () => {
+    plusSlides(1);
+  });
+
+  const currentSlideButtons = document.querySelectorAll(".dot");
+  currentSlideButtons.forEach((el, idx) => {
+    const index = idx + 1;
+
+    el.addEventListener("click", () => {
+      currentSlide(index);
+    });
+  });
+
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides((slideIndex += n));
+  }
+
+  function currentSlide(n) {
+    showSlides((slideIndex = n));
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("my_slides");
+    let dots = document.getElementsByClassName("dot");
+
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active2", "");
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active2";
+  }
 
   // retrieve github repos from github API
   const reposElement = document.querySelector(".repos");
@@ -593,7 +689,14 @@ async function main() {
           <div id="work">
             <h2>Trabalho</h2>
 
-            <img src="./assets/images/coding.jpg" alt="coding picture" />
+            <div class="slide_and_dot_container">
+              <div class="slideshow_container">
+                <a class="prev">&#10094;</a>
+                <a class="next">&#10095;</a>
+              </div>
+
+              <div class="dots_container"></div>
+            </div>
 
             <p>
               Abaixo você vai encontrar meus repositórios públicos do GitHub.
