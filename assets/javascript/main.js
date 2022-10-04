@@ -127,7 +127,7 @@ async function main() {
     },
     {
       name: "Python",
-      percentage: "75%",
+      percentage: "80%",
       image: "python.svg",
     },
     {
@@ -168,6 +168,14 @@ async function main() {
 
   // displaying certifications
   const certifications = [
+    {
+      name:'Scientific Computing With Python',
+      organization: 'FreeCodeCamp',
+      hours: '300h',
+      image: 'scientific-computing-with-python.png',
+      url: 'https://www.freecodecamp.org/certification/heitorthewizard/scientific-computing-with-python-v7',
+      code: null
+    },
     {
       name: "JavaScript Algorithms and Data Structures",
       organization: "FreeCodeCamp",
@@ -549,7 +557,7 @@ async function main() {
 
             <div class="contact_button_container">
               <a href="mailto:heitorthewizard@gmail.com" target="_blank">
-                <button id="contact_button">Email</button>
+                <button id="contact_button">Contate-me</button>
               </a>
             </div>
 
