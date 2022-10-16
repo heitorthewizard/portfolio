@@ -299,15 +299,15 @@ async function main() {
   const slidesData = [
     {
       image: "xprime.png",
-      caption: "Xprime-Life E-commerce (HTML, CSS, JS)",
+      caption: "Xprime-Life",
     },
     {
       image: "broadfarma.png",
-      caption: "Broadfarma Website (HTML, CSS, JS)",
+      caption: "Broadfarma",
     },
     {
       image: "agroibi.png",
-      caption: "Agroibi Marketplace (ReactJS, Sanity)",
+      caption: "Agroibi",
     },
   ];
 
