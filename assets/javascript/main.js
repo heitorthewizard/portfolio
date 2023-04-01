@@ -111,18 +111,28 @@ async function main() {
       image: "css3.svg",
     },
     {
+      name: "Tailwind CSS",
+      percentage: "80%",
+      image: "tailwindcss.svg",
+    },
+    {
       name: "JavaScript",
       percentage: "85%",
       image: "javascript.svg",
     },
     {
-      name: "Node JS",
+      name: "TypeScript",
       percentage: "70%",
+      image: "typescript.svg",
+    },
+    {
+      name: "Node JS",
+      percentage: "75%",
       image: "nodejs.svg",
     },
     {
       name: "React JS",
-      percentage: "20%",
+      percentage: "60%",
       image: "react.svg",
     },
     {
@@ -132,12 +142,12 @@ async function main() {
     },
     {
       name: "MySQL",
-      percentage: "20%",
+      percentage: "10%",
       image: "mysql.svg",
     },
     {
       name: "MongoDB",
-      percentage: "20%",
+      percentage: "65%",
       image: "mongodb.svg",
     },
   ];
@@ -169,7 +179,7 @@ async function main() {
   // displaying certifications
   const certifications = [
     {
-      name:'Scientific Computing With Python',
+      name: 'Scientific Computing With Python',
       organization: 'FreeCodeCamp',
       hours: '300h',
       image: 'scientific-computing-with-python.png',
@@ -577,7 +587,7 @@ async function main() {
 
               <img
                 id="profile_photo"
-                src="./assets/images/heitor.jpg"
+                src="./assets/images/heitor.png"
                 alt="profile photo"
               />
             </div>

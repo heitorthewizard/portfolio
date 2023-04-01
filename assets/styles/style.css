@@ -13,7 +13,7 @@ body {
   overflow: hidden;
   font-family: sans-serif;
   font-weight: bold;
-  background-color: rgb(32, 32, 42);
+  background-color: rgb(25, 22, 39);
 }
 
 ::-webkit-scrollbar {
@@ -627,6 +627,11 @@ footer {
 
 /* ###### DESKTOP ###### */
 @media only screen and (min-width: 900px) {
+  #app {
+    border-left: solid 1px rgb(230, 230, 230);
+    border-right: solid 1px rgb(230, 230, 230);
+  }
+
   #page_progress_bar {
     background-color: rgb(164, 50, 230);
   }
@@ -799,6 +804,7 @@ footer {
     right: 0;
     top: -100px;
   }
+
   /* about section */
 
   #about {
