@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/heitorthewizard/portfolio/static/css/main.6b9b6197.css",
+    "main.js": "/heitorthewizard/portfolio/static/js/main.71edd16f.js",
+    "static/media/me.jpg": "/heitorthewizard/portfolio/static/media/me.5d4b71a294cbeb96de9d.jpg",
+    "static/media/xprime.png": "/heitorthewizard/portfolio/static/media/xprime.a0f62f5b3f764733738a.png",
+    "static/media/agroibi.png": "/heitorthewizard/portfolio/static/media/agroibi.fdccc161f066ce2d0216.png",
+    "static/media/broadfarma.png": "/heitorthewizard/portfolio/static/media/broadfarma.16ff2d00cc591149616e.png",
+    "index.html": "/heitorthewizard/portfolio/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.6b9b6197.css",
+    "static/js/main.71edd16f.js"
+  ]
+}
