@@ -37,6 +37,14 @@ section {
   margin-top: -60px;
 }
 
+@media (max-width: 460px) {
+  .intro_btn-action {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
 @media (max-width: 991.98px) {
   .intro_sec {
     display: block;
