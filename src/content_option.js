@@ -115,6 +115,6 @@ const contactConfig = {
 
 const socialprofils = {
   github: "https://github.com/heitorthewizard",
-  linkedin: "https://linkedin.com/heitorthewizard",
+  linkedin: "https://www.linkedin.com/in/heitorthewizard/",
 };
 export { meta, dataabout, dataportfolio, worktimeline, skills, introdata, contactConfig, socialprofils, logotext };
